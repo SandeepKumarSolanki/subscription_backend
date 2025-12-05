@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import connectDB from '../config/db.js';
+// import connectDB from '../config/db.js';
 import courseModel from '../models/courseModel.js';
 
 const courses = [
@@ -17,7 +17,7 @@ const courses = [
 
 async function seed() {
     try {
-        await connectDB();
+        // await connectDB();
 
         await courseModel.deleteMany({});
         await courseModel.insertMany(courses);
